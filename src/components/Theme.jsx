@@ -1,15 +1,13 @@
 import { useEffect, useState } from "react";
 
 function Theme() {
-  const [theme, setTheme] = useState("light");
-
-  
+  const [theme, setTheme] = useState("dark");
 
   useEffect(() => {
-    if (theme == "dark") {
-      document.querySelector("html").classList.add("dark");
+    if (theme == "light") {
+      document.querySelector("html").classList.remove("dark");
     } else{
-        document.querySelector("html").classList.remove("dark");
+      document.querySelector("html").classList.add("dark");
     }
   }, [theme]);
 
