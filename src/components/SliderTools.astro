@@ -1,0 +1,55 @@
+---
+import Tools from "./Tools.astro";
+---
+
+<h3 class="xl:text-2xl font-semibold text-jade-950 dark:text-jade-50 my-5">
+  Dev Tools - Herramientas de desarrollo
+</h3>
+
+<div class="bg-jade-100 dark:bg-jade-950 p-6 rounded-lg flex flex-nowrap">
+  <div id="tools-slide">
+    <Tools src="/javascript.svg" title="Javascript" />
+    <Tools src="/html.svg" title="HTML5" />
+    <Tools src="/css-3.svg" title="CSS" />
+    <Tools src="/tailwind.svg" title="Tailwind" />
+    <Tools src="/react.svg" title="React" />
+    <Tools src="/vite.svg" title="Vite" />
+    <Tools src="/astro-light.svg" title="Astro" />
+    <Tools src="/node.svg" title="Node" />
+    <Tools src="/nginx.svg" title="Nginx" />
+    <Tools src="/electron.svg" title="Electron" />
+    <Tools src="/bootstrap.svg" title="Bootstrap" />
+    <Tools src="/python.svg" title="Python" />
+  </div>
+  <div id="tools-slide">
+    <Tools src="/javascript.svg" title="Javascript" />
+    <Tools src="/html.svg" title="HTML5" />
+    <Tools src="/css-3.svg" title="CSS" />
+    <Tools src="/tailwind.svg" title="Tailwind" />
+    <Tools src="/react.svg" title="React" />
+    <Tools src="/vite.svg" title="Vite" />
+    <Tools src="/astro-light.svg" title="Astro" />
+    <Tools src="/node.svg" title="Node" />
+    <Tools src="/nginx.svg" title="Nginx" />
+    <Tools src="/electron.svg" title="Electron" />
+    <Tools src="/bootstrap.svg" title="Bootstrap" />
+    <Tools src="/python.svg" title="Python" />
+  </div>
+ 
+</div>
+
+<style>
+  @keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  #tools-slide {
+    display: flex;
+    animation: 30s slide infinite linear;
+  }
+</style>
