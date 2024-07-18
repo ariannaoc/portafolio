@@ -1,26 +1,29 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import { useStore } from '@nanostores/react';
+import { theme } from "../states/theme";
 
 
 function Theme() {
-  const [theme, setTheme] = useState("dark");
+  const $theme = useStore(theme);
 
   useEffect(() => {
-    if (theme == "light") {
+    if ($theme == "light") {
       document.querySelector("html").classList.remove("dark");
     } else{
       document.querySelector("html").classList.add("dark");
     }
-  }, [theme]);
+  }, [$theme]);
 
   return (
+
     <div className="text-right">
       <button
         className="p-2 rounded-full bg-bunker-100 dark:bg-bunker-800 hover:scale-110 transition-all duration-150"
         onClick={() => {
-            setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+          theme.set($theme === "light" ? "dark" : "light");
         }}
       >
-        {theme == "light" ? (
+        {$theme == "light" ? (
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
