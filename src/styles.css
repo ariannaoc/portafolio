@@ -1,13 +1,13 @@
-  @keyframes slide {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(-100%);
-    }
+@keyframes slide {
+  from {
+    transform: translateX(0);
   }
+  to {
+    transform: translateX(-100%);
+  }
+}
 
-  #tools-slide {
-    display: flex;
-    animation: 30s slide infinite linear;
-  }
+#tools-slide {
+  display: flex;
+  animation: 25s slide infinite linear;
+}

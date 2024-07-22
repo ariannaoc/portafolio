@@ -1,12 +1,14 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import Presentation from '../components/Presentation.astro';
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Presentation from "../components/Presentation.astro";
+import SliderTools from "../components/SliderTools.astro";
 ---
 
-<Layout title="Portafolio Arianna Olivares">
-	
-	<main class="mx-20 my-10">
-		<Presentation />
-	</main>
-</Layout>
+  <Layout title="Portafolio Arianna Olivares">
+    <main class="mx-10 lg:mx-20 xl:mx-24 2xl:mx-28 my-10 overflow-x-hidden">
+      <Presentation />
+      <br />
+      <SliderTools />
+    </main>
+  </Layout>
