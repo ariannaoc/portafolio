@@ -2,14 +2,21 @@
 interface Props {
 	title: string;
 	body: string;
+  src: string;
 }
 
-const {  title, body } = Astro.props;
+const {  title, body, src } = Astro.props;
 ---
 
-<div>
-
-	<h3>{title}</h3>
-	<p>{body}</p>
-
+<div
+  class="bg-white shadow-lg dark:shadow-none dark:bg-bunker-900 rounded-3xl xl:px-16 lg:px-16 px-2 xl:py-10 lg:py-10 py-6 xl:w-96 md:w-80 w-56 text-center mx-auto my-6 min-w-40"
+>
+    <img
+      src={src}
+      class="h-16 w-16 min-h-12 min-w-16 sm:min-h-24 sm:min-w-24 lg:min-h-28 lg:min-w-28 xl:min-h-32 xl:min-w-32 2xl:min-h-36 2xl:min-w-36 m-auto"
+    />
+  <h3 class="py-4 font-bold text-xl text-jade-950 dark:text-bunker-100">
+    {title}
+  </h3>
+  <p class="font-semibold text-jade-950 dark:text-bunker-100">{body}</p>
 </div>
