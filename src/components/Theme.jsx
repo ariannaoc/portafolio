@@ -18,7 +18,7 @@ function Theme() {
 
     <div className="text-right">
       <button
-        className="p-2 rounded-full bg-bunker-100 dark:bg-bunker-800 hover:scale-110 transition-all duration-150"
+        className="p-2 rounded-full bg-bunker-100 dark:bg-bunker-800 hover:scale-110 transition-all duration-150 opacity-75"
         onClick={() => {
           theme.set($theme === "light" ? "dark" : "light");
         }}
