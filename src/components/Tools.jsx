@@ -25,22 +25,22 @@ function Slider() {
   return (
     <>
       <div id="tools-slide">
-        <Tools src="/javascript.svg" title="Javascript" />
-        <Tools src="/html.svg" title="HTML5" />
-        <Tools src="/css-3.svg" title="CSS" />
-        <Tools src="/tailwind.svg" title="Tailwind" />
-        <Tools src="/react.svg" title="React" />
-        <Tools src="/vite.svg" title="Vite" />
+        <Tools src="/tools/javascript.svg" title="Javascript" />
+        <Tools src="/tools/html.svg" title="HTML5" />
+        <Tools src="/tools/css-3.svg" title="CSS" />
+        <Tools src="/tools/tailwind.svg" title="Tailwind" />
+        <Tools src="/tools/react.svg" title="React" />
+        <Tools src="/tools/vite.svg" title="Vite" />
         {$theme == "dark" ? (
-          <Tools src="/astro-dark.svg" title="Astro" />
+          <Tools src="/tools/astro-dark.svg" title="Astro" />
         ) : (
           <Tools src="/astro-light.svg" title="Astro" />
         )}
-        <Tools src="/node.svg" title="Node" />
-        <Tools src="/nginx.svg" title="Nginx" />
-        <Tools src="/electron.svg" title="Electron" />
-        <Tools src="/bootstrap.svg" title="Bootstrap" />
-        <Tools src="/python.svg" title="Python" />
+        <Tools src="/tools/node.svg" title="Node" />
+        <Tools src="/tools/nginx.svg" title="Nginx" />
+        <Tools src="/tools/electron.svg" title="Electron" />
+        <Tools src="/tools/bootstrap.svg" title="Bootstrap" />
+        <Tools src="/tools/python.svg" title="Python" />
       </div>
     </>
   );
