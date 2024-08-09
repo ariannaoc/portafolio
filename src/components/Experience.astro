@@ -1,0 +1,54 @@
+---
+import Carousel from "../components/Carousel";
+
+const servicom = [
+  "/servicom/login.png",
+  "/servicom/inicio.png",
+  "/servicom/menu.png",
+  "/servicom/estudiantes.png",
+  "/servicom/proyectos.png",
+  "/servicom/formP.png",
+  "/servicom/periodo.png",
+  "/servicom/tutores.png",
+];
+const carnet = [
+  "/carnet/login.png",
+  "/carnet/principal.png",
+  "/carnet/data.png",
+  "/carnet/ajustes.png",
+  "/carnet/emitidos.png",
+];
+---
+
+<h3 class="xl:text-2xl font-semibold text-jade-950 dark:text-jade-50 my-10">
+  Experiencia
+</h3>
+
+<div class="flex gap-12 my-2">
+  <div>
+    <Carousel client:load images={servicom} />
+  </div>
+
+  <div>
+    <h3 class="py-4 font-bold text-xl text-jade-950 dark:text-bunker-100">
+      Universidad de Los Andes
+    </h3>
+    <p class="font-semibold text-jade-950 dark:text-bunker-100">
+      Desarrollo de Sistema de Carnetización Institucional para estudiantes y personal. 
+    </p>
+  </div>
+</div>
+
+<div class="flex gap-12 my-2">
+  <div class="my-auto">
+    <h3 class="py-4 font-bold text-xl text-jade-950 dark:text-bunker-100">
+      Pasantías en el departamento de informática del Instituto Universitario de Tecnología Dr. Cristóbal Mendoza
+    </h3>
+    <p class="font-semibold text-jade-950 dark:text-bunker-100">
+      Desarrollo de Sistema Automatizado para la gestión del Servicio Comunitario
+    </p>
+  </div>
+  <div>
+    <Carousel client:load images={carnet} />
+  </div>
+</div>
