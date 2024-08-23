@@ -25,20 +25,19 @@ const carnet = [
   Experiencia
 </h3>
 
-<div class="flex gap-12 my-2">
-  <div class="ml-10">
+<div class="xl:flex gap-10 my-2">
+  <div class="xl:ml-10 w-fit mx- sm:mx-0">
     <Carousel client:load images={servicom} />
   </div>
 
   <div>
-    <h3 class="py-4 font-bold text-xl text-jade-950 dark:text-bunker-100">
+    <h3 class="py-4 font-bold sm:text-xl text-base text-jade-950 dark:text-bunker-100">
       Universidad de Los Andes
     </h3>
-    <p class="font-semibold text-jade-950 dark:text-bunker-100">
-      Desarrollo de Sistema de Carnetización Institucional para estudiantes y
-      personal.
+    <p class="font-semibold text-jade-950 dark:text-bunker-100 sm:text-base text-xs">
+      Desarrollo de Sistema de Carnetización Institucional para estudiantes y personal.
     </p>
-    <div class="flex gap-2 mt-4">
+    <div class="flex flex-wrap gap-2 mt-4">
       <Label title="React" color="bg-blue-100"/>
       <Label title="JavaScript" color="bg-yellow-200"/>
       <Label title="HTML" color="bg-orange"/>
@@ -50,17 +49,23 @@ const carnet = [
   </div>
 </div>
 
-<div class="flex gap-12 my-2">
-  <div class="my-auto">
-    <h3 class="py-4 font-bold text-xl text-jade-950 dark:text-bunker-100">
-      Pasantías en el departamento de informática del Instituto Universitario de
-      Tecnología Dr. Cristóbal Mendoza
+<br>
+<br>
+
+
+<div class="xl:flex gap-10 my-2">
+  <div class="xl:ml-10 w-fit mx- sm:mx-0">
+    <Carousel client:load images={carnet} />
+  </div>
+
+  <div>
+    <h3 class="py-4 font-bold sm:text-xl text-base text-jade-950 dark:text-bunker-100">
+      Universidad de Los Andes
     </h3>
-    <p class="font-semibold text-jade-950 dark:text-bunker-100">
-      Desarrollo de Sistema Automatizado para la gestión del Servicio
-      Comunitario
+    <p class="font-semibold text-jade-950 dark:text-bunker-100 sm:text-base text-xs">
+      Desarrollo de Sistema de Carnetización Institucional para estudiantes y personal.
     </p>
-    <div class="flex gap-2 mt-4">
+    <div class="flex flex-wrap gap-2 mt-4">
       <Label title="React" color="bg-blue-100"/>
       <Label title="JavaScript" color="bg-yellow-200"/>
       <Label title="HTML" color="bg-orange"/>
@@ -70,7 +75,5 @@ const carnet = [
       <Label title="CSS" color="bg-blue-200"/>
     </div>
   </div>
-  <div class="mr-12">
-    <Carousel client:load images={carnet} />
-  </div>
 </div>
+

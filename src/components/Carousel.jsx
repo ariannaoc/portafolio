@@ -34,7 +34,7 @@ function Carousel({ images }) {
           </svg>
         </button>
 
-        <img src={images[index]} className="h-72 rounded-xl shadow-xl hover:scale-125 hover:z-10 transition-all duration-150"/>
+        <img src={images[index]} className=" w-56 sm:h-64 sm:w-auto lg:h-72 lg:w-auto xl:h-72 xl:w-auto rounded-xl shadow-xl hover:scale-125 hover:z-10 transition-all duration-150"/>
 
         <button
           className=" opacity-75 rounded-full h-fit my-auto"
