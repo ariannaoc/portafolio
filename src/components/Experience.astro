@@ -1,5 +1,6 @@
 ---
 import Carousel from "../components/Carousel";
+import Label from "./Label.astro";
 
 const servicom = [
   "/servicom/login.png",
@@ -34,19 +35,40 @@ const carnet = [
       Universidad de Los Andes
     </h3>
     <p class="font-semibold text-jade-950 dark:text-bunker-100">
-      Desarrollo de Sistema de Carnetización Institucional para estudiantes y personal. 
+      Desarrollo de Sistema de Carnetización Institucional para estudiantes y
+      personal.
     </p>
+    <div class="flex gap-2 mt-4">
+      <Label title="React" color="bg-blue-100"/>
+      <Label title="JavaScript" color="bg-yellow-200"/>
+      <Label title="HTML" color="bg-orange"/>
+      <Label title="Vite" color="bg-purple"/>
+      <Label title="Electron" color="bg-blue-100"/>
+      <Label title="Node" color="bg-green"/>
+      <Label title="Boostrap" color="bg-violet"/>
+    </div>
   </div>
 </div>
 
 <div class="flex gap-12 my-2">
   <div class="my-auto">
     <h3 class="py-4 font-bold text-xl text-jade-950 dark:text-bunker-100">
-      Pasantías en el departamento de informática del Instituto Universitario de Tecnología Dr. Cristóbal Mendoza
+      Pasantías en el departamento de informática del Instituto Universitario de
+      Tecnología Dr. Cristóbal Mendoza
     </h3>
     <p class="font-semibold text-jade-950 dark:text-bunker-100">
-      Desarrollo de Sistema Automatizado para la gestión del Servicio Comunitario
+      Desarrollo de Sistema Automatizado para la gestión del Servicio
+      Comunitario
     </p>
+    <div class="flex gap-2 mt-4">
+      <Label title="React" color="bg-blue-100"/>
+      <Label title="JavaScript" color="bg-yellow-200"/>
+      <Label title="HTML" color="bg-orange"/>
+      <Label title="Node" color="bg-green"/>
+      <Label title="Python" color="bg-yellow-100"/>
+      <Label title="Tailwind" color="bg-teal"/>
+      <Label title="CSS" color="bg-blue-200"/>
+    </div>
   </div>
   <div class="mr-12">
     <Carousel client:load images={carnet} />

@@ -34,7 +34,7 @@ function Slider() {
         {$theme == "dark" ? (
           <Tools src="/tools/astro-dark.svg" title="Astro" />
         ) : (
-          <Tools src="/astro-light.svg" title="Astro" />
+          <Tools src="/tools/astro-light.svg" title="Astro" />
         )}
         <Tools src="/tools/node.svg" title="Node" />
         <Tools src="/tools/nginx.svg" title="Nginx" />
