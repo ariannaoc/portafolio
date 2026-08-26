@@ -1,0 +1,97 @@
+---
+import Label from "./Label.astro";
+import ProjectModal from "./ProjectModal";
+import { SquareArrowOutUpRight } from "lucide-react";
+
+interface Props {
+  id: string;
+  title: string;
+  organization?: string;
+  description: string;
+  coverImage: string;
+  screenshots?: string[];
+  link?: string;
+  tags: string[];
+}
+
+const {
+  id,
+  title,
+  organization,
+  description,
+  coverImage,
+  screenshots = [],
+  link,
+  tags,
+} = Astro.props;
+
+const labelStyle =
+  "bg-jade-500/10 dark:bg-jade-400/10 border border-jade-600/30 dark:border-jade-400/30 text-jade-950 dark:text-jade-200";
+const hasScreenshots = screenshots.length > 0;
+---
+
+<article
+  class="flex flex-col justify-between bg-bunker-50/50 dark:bg-bunker-900/40 border border-bunker-200 dark:border-bunker-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+>
+  <div class="relative group overflow-hidden h-48 sm:h-56">
+    <img
+      src={coverImage}
+      alt={`Portada de ${title}`}
+      class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+    />
+   
+  </div>
+
+  <div class="p-6 flex flex-col flex-grow justify-between">
+    <div>
+      {
+        organization && (
+          <span class="inline-block text-xs font-semibold tracking-wider uppercase text-jade-600 dark:text-jade-400 mb-1">
+            {organization}
+          </span>
+        )
+      }
+
+      <h3
+        class="font-bold sm:text-xl text-base text-jade-950 dark:text-bunker-100 mb-2"
+      >
+        {title}
+      </h3>
+
+      <p
+        class="font-medium text-bunker-700 dark:text-bunker-300 sm:text-sm text-xs mb-4"
+      >
+        {description}
+      </p>
+
+      <div class="flex flex-wrap gap-2 mb-6">
+        {tags.map((tag) => <Label title={tag} color={labelStyle} />)}
+      </div>
+    </div>
+
+    <div class="flex gap-3">
+      {
+        hasScreenshots && (
+          <ProjectModal
+            client:load
+            project={{ id, title, description, coverImage, screenshots, tags }}
+          />
+        )
+      }
+
+      {
+        link && (
+          <a
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="w-full py-2.5 px-4 rounded-xl font-medium text-xs sm:text-sm flex items-center justify-center gap-2 bg-jade-600 hover:bg-jade-700 text-white dark:bg-jade-500 dark:hover:bg-jade-600 transition-colors duration-200 shadow-md"
+          >
+            <SquareArrowOutUpRight />
+            Visitar Proyecto
+          </a>
+        )
+      }
+    </div>
+  </div>
+</article>

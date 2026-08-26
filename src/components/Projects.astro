@@ -1,0 +1,64 @@
+---
+import ProjectCard from "./ProjectCard.astro";
+
+const projects = [
+  {
+    id: "servicom",
+    title: "Sistema de Gestión de Servicio Comunitario",
+    organization: "Instituto Universitario de Tecnología Dr. Cristóbal Mendoza",
+    description:
+      "Sistema de escritorio enfocado en digitalizar el flujo operativo manual de Servicio Comunitario. La solución optimiza la gestión de proyectos, asignación de tutores y emisión de constancias, transformando un proceso administrativo lento en una plataforma automatizada y eficiente para el control de información estudiantil.",
+    coverImage: "/servicom/SERVICOM.png",
+    screenshots: [
+      "/servicom/SERVICOM.png",
+      "/servicom/login.png",
+      "/servicom/inicio.png",
+      "/servicom/menu.png",
+      "/servicom/estudiantes.png",
+      "/servicom/proyectos.png",
+      "/servicom/formP.png",
+      "/servicom/periodo.png",
+      "/servicom/tutores.png",
+    ],
+    tags: ["React", "JavaScript", "HTML", "Vite", "Electron", "Node", "Bootstrap" ],
+  },
+  {
+    id: "carnet",
+    title: "Sistema de Carnetización Institucional",
+    organization: "Universidad de Los Andes",
+    description:
+      "Sistema web modular enfocado en automatizar el flujo de carnetización universitaria. La solución centraliza la captura de datos y agiliza la entrega de credenciales físicas y digitales para estudiantes y personal, reduciendo tiempos de espera y optimizando la seguridad institucional.",
+    coverImage: "/carnet/CARNETS.png",
+    screenshots: [
+      "/carnet/CARNETS.png",
+      "/carnet/login.png",
+      "/carnet/principal.png",
+      "/carnet/data.png",
+      "/carnet/ajustes.png",
+      "/carnet/emitidos.png",
+    ],
+    tags: ["React", "JavaScript", "HTML", "Node", "Python", "Tailwind", "CSS"],
+  },
+  //   {
+  //     id: "potfolio",
+  //     title: "Portafolio",
+  //     organization: "Proyecto Personal",
+  //     description: "Mi portafolio digital",
+  //     coverImage: "/proyectos/portada-demo.png",
+  //     link: "https://portafolio-zeta-pink-48.vercel.app/",
+  //     tags: ["Astro", "React", "JavaScript"]
+  //   }
+];
+---
+
+<section id="Projects" class="mx-5 lg:mx-20">
+  <h2
+    class="text-4xl text-center font-bold mb-12 text-jade-950 dark:text-jade-50 drop-shadow-md"
+  >
+    Proyectos
+  </h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-2 max-w-6xl mx-auto">
+    {projects.map((project) => <ProjectCard {...project} />)}
+  </div>
+</section>
